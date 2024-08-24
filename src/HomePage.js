@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect} from 'react';
 import rose from "./images/pinkrose.png"
 import "./HomePage.css";
+import poems from './Poem';
 
 function useWindowSize() {
 	const [windowSize, setWindowSize] = useState({
@@ -26,43 +27,36 @@ function useWindowSize() {
 	return windowSize;
 }
 
-function Poem(){
-	const poem = `  "My heart leaps up when I behold
-					A rainbow in the sky:
-					So was it when my life began;
-					So is it now I am a man;
-					So be it when I shall grow old,
-					Or let me die!
-					The Child is father of the Man;
-					And I could wish my days to be
-					Bound each to each by natural piety."`;
-
-
-	return <p className="poem"> {poem} </p>;
+function Poem({index}){
+	return <div className="poem">
+			<h3 className="poemtitle">{poems[index].title}</h3>
+			<p> {poems[index].poem} </p>
+			<h5 className="author"> - {poems[index].author}</h5>
+		</div>
 };
 
-function Flower(){
-	return <img className="backgroundFlower" src={rose} alt="rose"/>;
+function Flower({index}){
+	return <img className="backgroundFlower" src={poems[index].flower} alt="flower"/>;
 };
 
-function SidePanel(){
+function SidePanel({index}){
 	return <div className="sidepanel">
 		<div className="flowerContainer">
-			<img className="flower"src={rose} alt="rose"/>
+			<img className="flower"src={poems[index].flower} alt="rose"/>
 		</div>
 		<div className="circle"></div>
 		</div>;
 };
 
 function HomePage(){
-
 	const {width, height} = useWindowSize();
+	const [index, setIndex] = useState(1);
 
 	return <div className="main">
-			<h1 className="logo"> PG </h1>
+			<h1 className="logo">PuspGeet</h1>
 			<div className="wrapper"> 
-				<Poem/>
-				{width > 1000 ? <SidePanel/> : <Flower/>} 	
+				<Poem index={index}/>
+				{width > 900 ? <SidePanel index={index}/> : <Flower index={index}/>} 	
 			</div>
 		</div>;
 };

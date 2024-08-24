@@ -1,54 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
 
-
-.logo{ 
+.logo { 
 	font-family: "Dancing Script", cursive;
-	font-style: bold;
-	font-weight: 950;
+	text-align: center;
+	font-weight: 400;
 }
 
-.poem{
+.poem {
 	font-family: "Qwitcher Grypen", cursive;
 	font-size: 4rem;
 	font-weight: 100;
-	width: 500px;
+	width: 100%;
+	max-width: 500px;
 	padding: 10px;
-	backdrop-filter: blur(5rem);
+	backdrop-filter: blur(0rem);
+	box-sizing: border-box;
+	white-space: pre-line;
+	text-align: center;
 }
-.sidepanel{
-	width: 500px;
+
+.poemtitle{
+	font-weight: 700;
+}
+
+@media (max-width: 900px) {
+	.poem {
+		font-size: 2rem;
+		backdrop-filter: blur(2rem);
+	}
+}
+
+.sidepanel {
+	width: 100%;
+	max-width: 500px;
 	height: 500px;
 	flex-shrink: 5;
 	justify-content: center;
+	position: relative;
 }
-.wrapper{
+
+.wrapper {
 	display: flex;
+	flex-direction: row;
+	align-items: center;
 	justify-content: space-evenly;
 	position: relative;
 }
+
 .flowerContainer {
 	width: 100%;
 	height: 100%;
-	object-fit: fill;
 }
 
-.backgroundFlower{
-	object-fit: cover;
+.backgroundFlower {
+	object-fit: scale-down;
 	position: absolute;
 	z-index: -1;
+	width: 100%;
+	height: 100%;
 }
 
-.flower{
+.flower {
 	width: 100%;
 	height: 100%;
 	object-fit: scale-down;
 }
 
-.circle{
-	background-image: linear-gradient(to bottom, #b8b4b4,#dbd9d9,white, white);
-	position: relative;
-	top: -350px;
+.circle {
+	background-image: linear-gradient(to bottom, #b8b4b4, #dbd9d9, white, white);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	height: 500px;
 	width: 500px;
 	z-index: -2;
