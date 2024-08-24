@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+
+.logo{ 
+	font-family: "Dancing Script", cursive;
+	font-style: bold;
+	font-weight: 950;
+}
+
+.poem{
+	font-family: "Qwitcher Grypen", cursive;
+	font-size: 4rem;
+	font-weight: 100;
+	width: 500px;
+	padding: 10px;
+	backdrop-filter: blur(5rem);
+}
+.sidepanel{
+	width: 500px;
+	height: 500px;
+	flex-shrink: 5;
+	justify-content: center;
+}
+.wrapper{
+	display: flex;
+	justify-content: space-evenly;
+	position: relative;
+}
+.flowerContainer {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.backgroundFlower{
+	object-fit: cover;
+	position: absolute;
+	z-index: -1;
+}
+
+.flower{
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+
+.circle{
+	background-image: linear-gradient(to bottom, #b8b4b4,#dbd9d9,white, white);
+	position: relative;
+	top: -350px;
+	height: 500px;
+	width: 500px;
+	z-index: -2;
+	border-radius: 50%;
+}
