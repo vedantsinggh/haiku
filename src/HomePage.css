@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=New+Amsterdam&display=swap');
 
 .logo { 
-	font-family: "Dancing Script", cursive;
+	font-family: "New Amsterdam", cursive;
 	text-align: center;
 	font-weight: 400;
+	color: grey;
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: #fff;
+  content: '§';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
 }
 
 .poem {
@@ -21,7 +41,17 @@
 }
 
 .poemtitle{
-	font-weight: 700;
+	font-weight: 500;
+	font-size: 2rem;
+	font-family: "New Amsterdam";
+	margin-bottom: 0px;
+}
+
+.flower-count {
+	margin-top: 0px;
+	font-family: "ui-serif";
+	font-weight: 300;
+	font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {
@@ -37,7 +67,8 @@
 	height: 500px;
 	flex-shrink: 5;
 	justify-content: center;
-	position: relative;
+	position: sticky;
+	bottom: 100px;
 }
 
 .wrapper {
@@ -77,4 +108,30 @@
 	width: 500px;
 	z-index: -2;
 	border-radius: 50%;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	padding: 10px;
+	gap: 20px;
+	position: sticky;
+	bottom: 50px;
+}
+
+.btn {
+	height: 50px;
+	width:  50px;
+	border-radius: 50%;
+}
+
+.like {
+	height: 70px;
+	width: 70px;
+}
+
+.flowericon {
+	height: 40px;
+	width: 40px;
 }

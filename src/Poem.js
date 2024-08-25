@@ -2,11 +2,12 @@ import pinkrose from './images/pinkrose.png';
 import rose from './images/rose.png';
 
 class Poem{
-	constructor(title, poem, author, flower){
+	constructor(title, poem, author, flower, flowerCount){
 		this.poem = poem;
 		this.title= title;
 		this.author=author;
 		this.flower=flower;
+		this.flowerCount = flowerCount;
 	}
 };
 
@@ -19,10 +20,10 @@ const poems = [
 			Or let me die!
 			The Child is father of the Man;
 			And I could wish my days to be
-			Bound each to each by natural piety.
-		`,
+			Bound each to each by natural piety.`,
 	`William Wordsworth`,
-	rose
+	rose,
+	10
 	),
 
 	new Poem(`A Slumber Did My Spirit Seal`, `A slumber did my spirit seal
@@ -33,10 +34,10 @@ const poems = [
 			No motion has she now, no force;
 			She neither hears nor sees;
 			Rolled round in earth’s diurnal course,
-			With rocks, and stones, and trees.
-		`,
+			With rocks, and stones, and trees.`,
 		`William Wordsworth`,
-		pinkrose
+		pinkrose,
+		4
 	),
 ]
 

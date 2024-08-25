@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
-import rose from "./images/pinkrose.png"
 import "./HomePage.css";
 import poems from './Poem';
+import { PiFlowerTulipBold  } from "react-icons/pi";
+import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 
 function useWindowSize() {
 	const [windowSize, setWindowSize] = useState({
@@ -30,7 +31,8 @@ function useWindowSize() {
 function Poem({index}){
 	return <div className="poem">
 			<h3 className="poemtitle">{poems[index].title}</h3>
-			<p> {poems[index].poem} </p>
+			<p className="flower-count">{poems[index].flowerCount} <PiFlowerTulipBold/> </p>
+			<p>" {poems[index].poem}"</p>
 			<h5 className="author"> - {poems[index].author}</h5>
 		</div>
 };
@@ -53,10 +55,21 @@ function HomePage(){
 	const [index, setIndex] = useState(1);
 
 	return <div className="main">
-			<h1 className="logo">PuspGeet</h1>
+			<h1 className="logo"><span style={{color: "black"}}>p</span>usp<span style={{color: "black"}}>G</span>eet</h1>
+			<hr/>
 			<div className="wrapper"> 
 				<Poem index={index}/>
-				{width > 900 ? <SidePanel index={index}/> : <Flower index={index}/>} 	
+				{width > 900 ? <SidePanel index={index}/> : null} 	
+			</div>
+			<div className="controls">
+				<button className="btn back" onClick={() => {
+					if(index == 0) setIndex(poems.length - 1);
+					else setIndex((index - 1) % poems.length);
+				}}><MdArrowBackIosNew/> </button>
+				<button className="btn like"> <PiFlowerTulipBold className="flowericon"/> </button>
+				<button className="btn next" onClick={() => {
+					setIndex((index + 1) % poems.length);
+				}}> <MdArrowForwardIos/> </button>
 			</div>
 		</div>;
 };
