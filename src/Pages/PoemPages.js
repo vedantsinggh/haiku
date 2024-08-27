@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
-import "./HomePage.css";
-import poems from './Poem';
+import "../Styles/PoemPage.css";
+import poems from '../Models/Poem';
 import { PiFlowerTulipBold  } from "react-icons/pi";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 

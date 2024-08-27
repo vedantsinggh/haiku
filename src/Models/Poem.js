@@ -1,5 +1,5 @@
-import pinkrose from './images/pinkrose.png';
-import rose from './images/rose.png';
+import pinkrose from '../Assets/Images/pinkrose.png';
+import rose from '../Assets/Images/rose.png';
 
 class Poem{
 	constructor(title, poem, author, flower, flowerCount){
