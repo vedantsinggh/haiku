@@ -37,10 +37,6 @@ function Poem({index}){
 		</div>
 };
 
-function Flower({index}){
-	return <img className="backgroundFlower" src={poems[index].flower} alt="flower"/>;
-};
-
 function SidePanel({index}){
 	return <div className="sidepanel">
 		<div className="flowerContainer">
@@ -51,7 +47,7 @@ function SidePanel({index}){
 };
 
 function HomePage(){
-	const {width, height} = useWindowSize();
+	const {width, } = useWindowSize();
 	const [index, setIndex] = useState(1);
 
 	return <div className="main">
@@ -63,7 +59,7 @@ function HomePage(){
 			</div>
 			<div className="controls">
 				<button className="btn back" onClick={() => {
-					if(index == 0) setIndex(poems.length - 1);
+					if(index === 0) setIndex(poems.length - 1);
 					else setIndex((index - 1) % poems.length);
 				}}><MdArrowBackIosNew/> </button>
 				<button className="btn like"> <PiFlowerTulipBold className="flowericon"/> </button>

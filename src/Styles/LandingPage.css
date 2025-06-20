@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Nerko One';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Nerko One'), url('../Assets/Fonts/NerkoOne.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cedarville Cursive';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cedarville Cursive'), url('../Assets/Fonts/CedarvilleCursive.ttf') format('truetype');
+}
+
+:root{
+	--bg-color: #F2F2F2;
+	--highlighted-color: #FB6A65;
+    --dark-text-color: #252525;
+    --light-text-color: #F2F2F2;
+}
+
+body.dark {
+	--bg-color: #252525;
+	--highlighted-color: #FB6A65;
+    --dark-text-color: #F2F2F2;
+    --light-text-color: #F2F2F2;
+}
+
+body {
+	background-color: var(--bg-color);
+}
+
+.front-page-title {
+	font-family: 'Cedarville Cursive', cursive;
+	font-weight: normal;
+	color: var(--highlighted-color);
+    border-radius: 1px;
+    border-color: black;
+}
+
+.front-page-full-name {
+	font-family: 'Cedarville Cursive', cursive;
+	font-weight: normal;
+	color: var(--dark-text-color);
+    writing-mode: vertical-lr;
+    letter-spacing: 20px;
+    text-orientation: upright;
+    margin-bottom: 40px;
+    margin: 0px;
+}
+
+.front-page-full-name-small {
+	font-weight: normal;
+    font-size: 10px;
+	color: var(--dark-text-color);
+    writing-mode: vertical-lr;
+    letter-spacing: -3px;
+    text-orientation: upright;
+    margin: 0px;
+    margin-bottom: 40px;
+}
+
+.front-page-full-name-div {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: start;
+    gap: 0;
+    margin: 40px;
+}
+
+.front-page-div {
+	display: flex;
+	justify-content: center;
+	margin: 40px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sun-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    margin-left: 10px;
+    height: 60px;
+    background-color: var(--highlighted-color);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.reflection {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 80px;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 107, 107, 0.5) 0%, transparent 60%);
+    filter: blur(10px);
+}
+
+.front-page-tagline {
+	font-family: 'Cedarville Cursive';
+	font-size: 2.5rem;
+    color: var(--dark-text-color);
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.front-page-paragraph {
+	margin-top: 5px;
+    max-width: 500px;
+    color: var(--dark-text-color);
+	text-align: center;
+	font-family: Georgia, monospace;
+}
+
+.front-page-button {
+	margin-top: 50px;
+    background-color: var(--highlighted-color);
+    color: var(--light-text-color);
+	width: 100%;
+    max-width: 500px;
+	font-size: 1.5rem;
+	border: none;
+	font-family: Georgia, monospace;
+	font-weight: bold;
+	padding: 20px;
+	border-radius: 20px;
+}
