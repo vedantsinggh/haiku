@@ -1,6 +1,3 @@
-import pinkrose from '../Assets/Images/pinkrose.png';
-import rose from '../Assets/Images/rose.png';
-
 class Poem{
 	constructor(title, poem, author, flower, flowerCount){
 		this.poem = poem;
@@ -22,7 +19,7 @@ const poems = [
 			And I could wish my days to be
 			Bound each to each by natural piety.`,
 	`William Wordsworth`,
-	rose,
+	null,
 	10
 	),
 
@@ -36,7 +33,7 @@ const poems = [
 			Rolled round in earth’s diurnal course,
 			With rocks, and stones, and trees.`,
 		`William Wordsworth`,
-		pinkrose,
+		null,
 		4
 	),
 ]
